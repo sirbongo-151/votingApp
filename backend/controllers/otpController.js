@@ -1,5 +1,6 @@
 import OTP from '../models/otpModel.js';
-import { sendEmail } from '../utils/sendOtp.js';  // ✅ Named import
+import { sendEmail } from '../utils/sendOtp.js';  
+
 
 export const sendOtp = async (req, res) => {
     try {
@@ -36,7 +37,7 @@ export const verifyOtp = async (req, res) => {
             return res.status(400).json({ message: "Invalid OTP" });
         }
 
-        await OTP.deleteOne({ email }); // Delete OTP after successful verification
+        await OTP.deleteOne({ email }); 
         res.status(200).json({ message: "OTP verified successfully" });
     } catch (error) {
         console.error("Error verifying OTP:", error);
