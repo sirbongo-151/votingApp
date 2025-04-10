@@ -59,7 +59,7 @@ const LoginScreen = () => {
   
   
   return (
-    <div className="w-screen h-full flex flex-wrap items-center justify-center mt-20">
+    <div className="w-screen h-full flex flex-wrap items-center justify-center mt-20 bg-gray-200">
       <div className="">
         <img src="https://img.freepik.com/free-vector/sign-page-abstract-concept-illustration_335657-3875.jpg?semt=ais_hybrid" alt="" className="h-100" />
       </div>
@@ -70,9 +70,9 @@ const LoginScreen = () => {
       <p className="text-center mt-3">Please login with your Credentials  <br /> if you have an issue contact admin</p>
     <div>
       <form onSubmit={handleSubmit} className=" flex flex-col gap-3 justify-center items-center mx-auto mt-12">
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Please enter your email" required  className="w-md outline-none border-1 border-gray-400 rounded-xl p-2"/>
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Please enter your email" required  className="w-sm outline-none border-1 border-gray-400 rounded-xl p-2"/>
 
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required  className="w-md outline-none border-1 border-gray-400 rounded-xl p-2"/>
+        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required  className="w-sm outline-none border-1 border-gray-400 rounded-xl p-2"/>
         <button type="submit" disabled={isLoading} className="bg-blue-800 hover:bg-blue-700 w-md rounded-xl p-2 text-2xl text-white font-semibold">
         {isLoading ? 'Logging in...' : 'Login'}</button>
         {/* {error && <p className="bg-red-700 text-white w-md p-2 text-center">{error.data?.message || "Error logging in"}</p>} */}
